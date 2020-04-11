@@ -3,6 +3,10 @@ from datetime import datetime
 from flask import Flask, url_for, jsonify, abort, request
 from flask_sqlalchemy import SQLAlchemy
 
+import pymysql
+pymysql.install_as_MySQLdb()
+import MySQLdb
+
 app = Flask(__name__)
 app.config.from_object(config)
 db = SQLAlchemy(app)
